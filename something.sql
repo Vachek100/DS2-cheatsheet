@@ -1,3 +1,5 @@
+-- Napiste ulozenou funkci CreateArticleYear s parametrem p_year int, -- ktera vytvori tabulku z_article_year se stejnou strukturou, jako ma -- tabulka z_article, az na novy atribut last_update datoveho typu date -- (hodnota nemuze byt null). Primarni a cizi klice musi byt stejne jako -- v puvodni tabulce. -- -- Do nove tabulky zkopirujete, jednim prikazem SQL, zaznamy clanku z -- roku p_year z tabulky z_article (v dynamickem SQL pouzijete vazane -- promenne pokud je to mozne). Hodnota atributu last_update bude nastavena -- na aktualni datum. -- -- Jednim prikazem SQL zjistite pocet zaznamu nove tabulky, tento pocet -- pak bude funkce vracet. -- -- Pred ukoncenim funkce zrusite tabulku. -- -- V miste volani funkce vypisete navratovou hodnotu funkce. Budete testovat -- pro dva roky tak, aby v jednom roce byl pocet zaznamu 0 a ve druhem roce -- byl pocet zaznamu nenulovy.
+
 SET SERVEROUTPUT ON;
 
 CREATE OR REPLACE FUNCTION CreateArticleYear(
