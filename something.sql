@@ -25,6 +25,20 @@ BEGIN
         WHERE 1 = 0
     ';
     
+    /*
+    
+    v_sql := 'create table z_article_year' || '(' 
+    || 'aid int primary key,' 
+    || 'jid int null references z_journal, ' 
+    || 'UT_WoS varchar(25) null, ' 
+    || 'name varchar(2000) not null, ' 
+    || 'type varchar(100) null, ' 
+    || 'year int not null, ' 
+    || 'author_count int null, ' 
+    || 'last_update date not null ' || ')';
+    
+    */
+    
     --pridani noveho sloupce
     EXECUTE IMMEDIATE '
         ALTER TABLE z_article_year
