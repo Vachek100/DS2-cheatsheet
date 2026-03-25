@@ -138,3 +138,21 @@ BEGIN
     -- vrátí počet záznamů jako výsledek funkce
 
 END;
+/
+
+DECLARE
+    v_result NUMBER;
+BEGIN
+    v_result := CreateArticleYear(2023);
+
+    DBMS_OUTPUT.PUT_LINE('Pocet zaznamu: ' || v_result);
+END;
+/
+
+-- NEBO
+
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Rok 1900: ' || CreateArticleYear(1900));
+    DBMS_OUTPUT.PUT_LINE('Rok 2023: ' || CreateArticleYear(2023));
+END;
+/
