@@ -95,3 +95,12 @@ BEGIN
 
 END;
 /
+
+DECLARE
+    v_xml CLOB;
+BEGIN
+    v_xml := F_ExportJournalXML(1, 2023);
+
+    DBMS_OUTPUT.PUT_LINE(DBMS_LOB.SUBSTR(v_xml, 4000, 1));
+END;
+/
