@@ -81,6 +81,10 @@ BEGIN
 
 END;
 /
+BEGIN
+    P_BuildArticleRatingStats(2018, 'REPLACE');
+END;
+/
 
 SELECT *
 FROM ARTICLE_RATING_STATS
